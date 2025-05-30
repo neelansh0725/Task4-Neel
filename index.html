@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Working To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My To-Do List (2025)</h1>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Add a task..." />
+      <input type="date" id="dueDateInput" />
+      <button id="addTaskBtn">Add</button>
+    </div>
+
+    <div class="filters">
+      <button data-filter="all" class="filter active">All</button>
+      <button data-filter="active" class="filter">Active</button>
+      <button data-filter="completed" class="filter">Completed</button>
+    </div>
+
+    <div id="progressContainer">
+      <div id="progressText">0 of 0 tasks completed (0%)</div>
+      <div id="progressBarBackground">
+        <div id="progressBar"></div>
+      </div>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
